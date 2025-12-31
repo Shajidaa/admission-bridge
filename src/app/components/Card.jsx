@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ApplyModal from "./ApplyModals";
 
 export default function UniCard({
   uni,
@@ -8,7 +9,7 @@ export default function UniCard({
   isSelected,
 }) {
   const isEligible = userGpa >= uni.min_gpa && userIelts >= uni.min_ielts;
-
+  const [isApplyOpen, setIsApplyOpen] = useState(false);
   return (
     <div
       className={`border p-5 rounded-xl shadow-md bg-white ${
@@ -40,11 +41,17 @@ export default function UniCard({
             Not Eligible
           </span>
         ) : (
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm w-full">
+          <button
+            onClick={() => setIsApplyOpen(true)}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm w-full"
+          >
             Apply Now
           </button>
         )}
       </div>
+      {isApplyOpen && (
+        <ApplyModal uni={uni} onClose={() => setIsApplyOpen(false)} />
+      )}
     </div>
   );
 }

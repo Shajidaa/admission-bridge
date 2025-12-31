@@ -9,7 +9,6 @@ export default function Hero() {
           "url('https://i.ibb.co.com/nMf8hHvY/coolbackgrounds-particles-stellar.png')",
       }}
     >
-      {/* Dark Overlay to make text pop */}
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content Container */}
@@ -28,6 +27,12 @@ export default function Hero() {
             <option>Germany</option>
             <option>Singapore</option>
             <option>Australia</option>
+            <option>Germany</option>
+            <option>Singapore</option>
+            <option>Netherlands</option>
+            <option>Japan</option>
+            <option>South Korea</option>
+            <option>Bangladesh</option>
           </select>
 
           {/* Select Degree */}
