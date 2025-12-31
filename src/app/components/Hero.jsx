@@ -3,14 +3,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero({ onSearch }) {
-  // State for search criteria
   const [country, setCountry] = useState("");
   const [degree, setDegree] = useState("");
 
   const handleSearchClick = () => {
     if (onSearch) {
       onSearch(country, degree);
-      // Smooth scroll to results section after search
+
       setTimeout(() => {
         const resultsSection = document.getElementById("results-section");
         if (resultsSection) {
@@ -23,7 +22,7 @@ export default function Hero({ onSearch }) {
     }
   };
 
-  // Animation variants
+  // Animation
   const headlineVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -64,7 +63,6 @@ export default function Hero({ onSearch }) {
 
   return (
     <div className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 min-h-screen sm:h-[90vh] md:h-[85vh] lg:h-[80vh] flex flex-col items-center justify-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Animated background elements - Responsive sizes */}
       <div className="absolute inset-0">
         <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-32 h-32 sm:w-72 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-48 h-48 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -74,7 +72,6 @@ export default function Hero({ onSearch }) {
       <div className="absolute inset-0 bg-black/30"></div>
 
       <div className="relative z-10 flex flex-col items-center gap-6 sm:gap-8 w-full max-w-7xl text-center">
-        {/* Animated Headline - Responsive text sizes */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -86,7 +83,6 @@ export default function Hero({ onSearch }) {
           </h1>
         </motion.div>
 
-        {/* Animated Subtitle - Responsive text and spacing */}
         <motion.p
           initial="hidden"
           animate="visible"
@@ -97,14 +93,12 @@ export default function Hero({ onSearch }) {
           comprehensive search platform
         </motion.p>
 
-        {/* Animated Search Bar - Fully responsive layout */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={searchBarVariants}
           className="flex flex-col lg:flex-row items-stretch lg:items-end gap-3 sm:gap-4 w-full max-w-6xl justify-center bg-white/15 p-4 sm:p-6 rounded-2xl sm:rounded-3xl backdrop-blur-xl border border-white/20 shadow-2xl mx-2"
         >
-          {/* Country Select - Responsive */}
           <div className="text-left w-full lg:w-auto flex-1 lg:flex-none">
             <label className="block text-xs sm:text-sm font-semibold text-blue-100 mb-2">
               Country
@@ -137,11 +131,10 @@ export default function Hero({ onSearch }) {
               <option value="">Select Degree Level</option>
               <option value="Bachelor">🎓 Bachelor&apos;s Degree</option>
               <option value="Master">🎯 Master&apos;s Degree</option>
-              <option value="PhD">🔬 PhD / Doctorate</option>
             </select>
           </div>
 
-          {/* Search Button - Responsive */}
+          {/* Search Button  */}
           <div className="flex flex-col items-center w-full lg:w-auto mt-2 lg:mt-8">
             <motion.button
               onClick={handleSearchClick}
