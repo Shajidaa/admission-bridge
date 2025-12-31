@@ -2,6 +2,8 @@
 
 A modern web application that helps students find and apply to universities worldwide based on their budget, academic qualifications, and preferences.
 
+[Live_Project](https://admission-bridge-nine.vercel.app/)
+
 ## Features
 
 - **University Search**: Browse universities with advanced filtering options
@@ -111,60 +113,6 @@ Fetch universities with optional filtering parameters:
 - `country`: Filter by country
 - `degree`: Filter by degree level
 
-### POST /api/apply
-
-Submit a university application:
-
-```json
-{
-  "university_id": 1,
-  "student_name": "John Doe",
-  "student_email": "john@example.com",
-  "student_gpa": 3.5,
-  "student_ielts": 7.0
-}
-```
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-
-## Features in Detail
-
-### University Search & Filtering
-
-- Real-time search by country and degree level
-- Budget slider for tuition fee filtering
-- GPA and IELTS score inputs for personalized matching
-- Clear filter options for easy navigation
-
-### University Comparison
-
-- Select up to 3 universities for side-by-side comparison
-- Compare tuition fees, requirements, and other details
-- Floating comparison button for easy access
-
-### Application System
-
-- Direct application submission through the platform
-- Automatic eligibility checking based on GPA and IELTS scores
-- Real-time feedback on application status
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## License
 
 This project is private and proprietary.
-
-## Support
-
-For support or questions, please contact the development team.
