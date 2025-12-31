@@ -115,7 +115,7 @@ export default function UniCard({
           }`}
         >
           <span>
-            {isEligible || userGpa === 0 ? "Apply Now" : "View Details"}
+            {isEligible || userGpa === 0 ? "Apply Now" : "Cannot Apply"}
           </span>
           <FaArrowRight className="w-4 h-4" />
         </button>

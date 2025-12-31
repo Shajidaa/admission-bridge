@@ -62,7 +62,7 @@ export default function Hero({ onSearch }) {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 min-h-screen sm:h-[90vh] md:h-[85vh] lg:h-[80vh] flex flex-col items-center justify-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900  sm:h-[90vh] md:h-[85vh] lg:h-[80vh] flex flex-col items-center justify-center text-white px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-32 h-32 sm:w-72 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-10 w-48 h-48 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
