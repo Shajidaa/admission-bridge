@@ -28,7 +28,7 @@ export default function ApplyModal({ uni, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[110] p-4">
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-110 p-4">
       <div className="bg-white p-8 rounded-2xl max-w-md w-full relative">
         <h2 className="text-2xl font-bold mb-2">Apply to {uni.name}</h2>
         <p className="text-sm text-gray-500 mb-6">Step {step} of 2</p>
@@ -51,6 +51,7 @@ export default function ApplyModal({ uni, onClose }) {
               type="text"
               placeholder="Full Name"
               className="w-full border p-3 rounded-lg"
+              required
               onChange={(e) =>
                 setFormData({ ...formData, student_name: e.target.value })
               }
@@ -59,6 +60,7 @@ export default function ApplyModal({ uni, onClose }) {
               type="email"
               placeholder="Email Address"
               className="w-full border p-3 rounded-lg"
+              required
               onChange={(e) =>
                 setFormData({ ...formData, student_email: e.target.value })
               }
