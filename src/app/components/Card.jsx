@@ -107,11 +107,16 @@ export default function UniCard({
 
         {/* Apply Button */}
         <button
-          onClick={() => setIsApplyOpen(true)}
+          onClick={() => {
+            if (isEligible || userGpa === 0) {
+              setIsApplyOpen(true);
+            }
+          }}
+          disabled={!isEligible && userGpa > 0}
           className={`w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
             isEligible || userGpa === 0
-              ? "bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-md hover:shadow-lg"
-              : "bg-gray-100 hover:bg-gray-200 text-gray-600 border border-gray-200"
+              ? "bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-md hover:shadow-lg cursor-pointer"
+              : "bg-gray-100 text-gray-400 border border-gray-200 cursor-not-allowed opacity-60"
           }`}
         >
           <span>
