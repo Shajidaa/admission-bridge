@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 export default function ApplyModal({ uni, onClose }) {
-  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     student_name: "",
     student_email: "",

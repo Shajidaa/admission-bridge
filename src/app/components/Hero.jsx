@@ -7,7 +7,7 @@ export default function Hero({ onSearch }) {
   const [degree, setDegree] = useState("");
 
   const handleSearchClick = () => {
-    if (onSearch) {
+    if (onSearch && (country || degree)) {
       onSearch(country, degree);
 
       setTimeout(() => {
@@ -19,6 +19,19 @@ export default function Hero({ onSearch }) {
           });
         }
       }, 100);
+    } else {
+      if (onSearch) {
+        onSearch("", "");
+        setTimeout(() => {
+          const resultsSection = document.getElementById("results-section");
+          if (resultsSection) {
+            resultsSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 100);
+      }
     }
   };
 
@@ -129,8 +142,8 @@ export default function Hero({ onSearch }) {
               className="p-3 sm:p-4 border-0 rounded-lg sm:rounded-xl text-gray-800 w-full lg:w-64 xl:w-72 focus:outline-none focus:ring-4 focus:ring-blue-400/50 bg-white/95 backdrop-blur-sm shadow-lg transition-all duration-300 hover:bg-white font-medium text-sm sm:text-base"
             >
               <option value="">Select Degree Level</option>
-              <option value="Bachelor">🎓 Bachelor&apos;s Degree</option>
-              <option value="Master">🎯 Master&apos;s Degree</option>
+              <option value="Bachelors">🎓 Bachelor&apos;s Degree</option>
+              <option value="Masters">🎯 Master&apos;s Degree</option>
             </select>
           </div>
 
