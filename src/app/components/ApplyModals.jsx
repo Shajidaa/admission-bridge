@@ -86,7 +86,7 @@ export default function ApplyModal({ uni, onClose }) {
             <div className="flex gap-2">
               <button
                 type="submit"
-                className="w-2/3 bg-green-600 text-white py-3 rounded-lg font-bold"
+                className="w-full bg-green-600 text-white py-3 rounded-lg font-bold"
               >
                 Submit Application
               </button>

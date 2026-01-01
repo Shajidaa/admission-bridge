@@ -30,7 +30,7 @@ export default function UniCard({
     >
       {/* Header */}
       <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
+        <div className="flex  justify-between items-start mb-4">
           <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1 pr-3">
             {uni.name}
           </h3>
